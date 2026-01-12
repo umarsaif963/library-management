@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.cs">
+    <title>Library Book Borrowing</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="container">
+        <header>
+            <h1>📚 Library System</h1>
+            <p>Search and borrow books</p>
+        </header>
 
-    <input id="input" type="text" placeholder="Enter the name of book">
-    
-    <button onclick="ok()">Submit</button>
+        <section class="book-catalog">
+            <h2>Available Books</h2>
+            <div id="bookList" class="book-grid"></div>
+        </section>
 
+        <section class="borrow-section">
+            <h2>Borrow a Book</h2>
+            <div class="input-group">
+                <input type="text" id="bookInput" placeholder="Enter book name (physics, computer, math, science)">
+                <button id="borrowBtn" onclick="borrowBook()">Borrow</button>
+            </div>
+            <div id="message" class="message"></div>
+        </section>
 
-    <div id="output"></div>
+        <section class="status-section">
+            <h2>Borrowed Books</h2>
+            <div id="borrowedList" class="borrowed-grid"></div>
+        </section>
+    </div>
     <script src="script.js"></script>
 </body>
-
 </html>
